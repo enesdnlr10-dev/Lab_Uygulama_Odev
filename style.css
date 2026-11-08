@@ -1,0 +1,194 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+
+.sayfa {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.sag {
+  width: 600px;
+}
+
+
+.yan-menu {
+  width: 220px;
+  border: 1px solid #ccc;
+}
+
+.yan-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.yan-menu li {
+  position: relative;
+}
+
+.yan-menu li a {
+  display: block;
+  padding: 10px 12px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.yan-menu li a:hover {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+.alt-var > a::after {
+  content: "›";
+  float: right;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.alt-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 100;
+}
+
+.yan-menu li:hover > .alt-menu {
+  display: block;
+}
+
+
+.ust-resim {
+  position: relative;
+  width: 600px;
+  height: 370px;
+}
+
+.resimler {
+  list-style: none;
+  margin: 0;
+  padding: 310px 0 0 0;
+  display: flex;
+  gap: 6px;
+}
+
+.kucuk {
+  width: 60px;
+  height: 45px;
+  display: block;
+  border: 1px solid #ccc;
+}
+
+.buyuk {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 300px;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.resimler li:first-child .buyuk {
+  opacity: 1;
+  z-index: 0;
+}
+
+.resimler li:hover .buyuk {
+  opacity: 1;
+  z-index: 2;
+}
+
+
+.yapraklar {
+  margin-top: 10px;
+}
+
+.sekmeler {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border-bottom: 2px solid #ff6600;
+}
+
+.sekmeler a {
+  display: block;
+  padding: 8px 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+.sekmeler a:hover {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+.icerikler {
+  position: relative;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.icerik {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  background-color: #fff;
+  opacity: 0;
+  z-index: 1;
+}
+
+.icerik:first-child {
+  opacity: 1;
+  z-index: 0;
+}
+
+.icerik:target {
+  opacity: 1;
+  z-index: 2;
+}
+
+
+.urunler {
+  display: flex;
+  gap: 12px;
+}
+
+.urun {
+  width: 130px;
+  text-align: center;
+}
+
+.urun img {
+  display: block;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.urun .ad {
+  margin: 6px 0 2px 0;
+  font-size: 12px;
+  color: #333;
+}
+
+.urun .fiyat {
+  margin: 0;
+  font-weight: bold;
+  color: #ff6600;
+}
